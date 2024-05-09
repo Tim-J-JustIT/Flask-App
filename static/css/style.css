@@ -1,0 +1,8 @@
+body{
+    background: url('../media/daniel-j-schwarz-k0bUsmrVWlc-unsplash.jpg')
+}
+
+#hero2{
+    height:120px;
+    border: red 5px solid;
+}

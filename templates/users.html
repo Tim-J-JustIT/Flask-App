@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2><a href="{{url_for('add_user')}}">add user </a></h2>
+<div>
+    <h1>This is users page</h1>
+</div>
+
+<table>
+    <thead>
+        <th>User ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Profile Image</th>
+    </thead>
+    <tbody>
+        {% for row in aUser %}
+        <td>{{ row["UserID"] }}</td>
+        <td>{{ row["Firstname"] }}</td>
+        <td>{{ row["Lastname"] }}</td>
+        <td>{{ row["Email"] }}</td>
+        <td>{{ row["ProfileImg"] }}</td>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% if title %}
+
+<title>{{ title }}</title>
+
+{% else %}
+
+<title>Project</title>
+
+{% endif %}
+</head>
+
+<body>
+    <header>
+    <ul> <!-- href takes def name inside url_for -->
+        <li><a href="{{url_for('index')}}">Home</a></li>
+        <li><a href="{{url_for('product')}}">Products</a></li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('users')}}">Users</a></li>
+       
+    </ul>
+    </header>
+    <div>
+        {% block content %}
+        <div id="hero">
+
+        </div>
+        {% endblock content %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
